@@ -8,7 +8,7 @@ namespace homework2Remake
         public static int DeadAntCount(string ants)
         {
             int deadAnt = 0;
-            int allAnt = 0;
+            int lifeAnt = 0;
             int[] partDeadAnt = { 0, 0, 0 };
 
             if (!String.IsNullOrEmpty(ants))
@@ -31,11 +31,11 @@ namespace homework2Remake
                     {
                         if (ants.Substring(i, 3) == "ant")
                         {
-                            allAnt++;
+                            lifeAnt++;
                         }
                     }
                 }
-                deadAnt = partDeadAnt.Max() - allAnt;
+                deadAnt = partDeadAnt.Max() - lifeAnt;
 
                 return deadAnt;
             }
